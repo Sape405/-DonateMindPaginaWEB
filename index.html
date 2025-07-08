@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Sueños Luminosos</title>
+  <link rel="stylesheet" href="src/css/styles.css" />
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"></script>
+  <script src="src/js/main.js" defer></script>
+  <link rel="manifest" href="public/manifest.json">
+<meta name="theme-color" content="#222222">
+
+</head>
+<body>
+  <header>
+    <nav class="hamburger-menu">
+      <input type="checkbox" id="menu-toggle" hidden />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="menu">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about">Sobre Nosotros</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#donate">Donar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h1>Bienvenidos a Sueños Luminosos</h1>
+      <p>Un videojuego que apoya a personas con trastornos del sueño.</p>
+    </section>
+
+    
+
+    <section id="about">
+      <h2>Sobre Nosotros</h2>
+      <p>Desarrollamos videojuegos con impacto social.</p>
+      <button id="installBtn" style="display: none;">📲 Instalar App</button>
+    </section>
+
+    <section id="contact">
+      <h2>Contáctanos</h2>
+      <form>
+        <input type="text" placeholder="Nombre" required />
+        <input type="email" placeholder="Correo electrónico" required />
+        <textarea placeholder="Mensaje"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section id="donate">
+      <h2>Haz una Donación</h2>
+      <form>
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="number" name="monto" placeholder="Monto (MXN)" required />
+        <button type="submit">Donar</button>
+        <button style="display: none;">📲 Instalar App</button>
+      </form>
+    </section>
+  </main>
+
+  
+
+  <footer>
+    <p>&copy; 2025 Sueños Luminosos</p>
+  </footer>
+
+  <nav class="bottom-nav">
+    <a href="#home">Inicio</a>
+    <a href="#about">Nosotros</a>
+    <a href="#donate">Donar</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+
+  <script>
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('menu-toggle').checked = false;
+      });
+    });
+  </script>
+</body>
+</html>
